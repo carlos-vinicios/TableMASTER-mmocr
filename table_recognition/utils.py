@@ -192,7 +192,7 @@ def delete_invalid_bbox(img, bboxes):
     for i, bbox in enumerate(bboxes):
         if (sum(bbox<0.)>0) or (sum(bbox[0::2]>width)>0) or (sum(bbox[1::2]>height)>0):
             continue
-        if Polygon(bbox.reshape(4,2).astype(np.int)).area == 0.:
+        if Polygon(bbox.reshape(4,2).astype(np.int32)).area == 0.:
             continue
         new_bboxes.append(bbox)
     new_bboxes = np.array(new_bboxes)
