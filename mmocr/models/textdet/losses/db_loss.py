@@ -3,7 +3,7 @@ import torch.nn.functional as F
 from torch import nn
 
 from mmdet.models.builder import LOSSES
-from mmocr.models.common.losses.dice_loss import DiceLoss
+from mmdet.models.losses.dice_loss import DiceLoss
 
 
 @LOSSES.register_module()
