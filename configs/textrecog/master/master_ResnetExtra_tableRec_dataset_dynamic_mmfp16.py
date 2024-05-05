@@ -2,7 +2,7 @@ _base_ = [
     '../../_base_/default_runtime.py',
 ]
 
-alphabet_file = '/data_0/dataset/processed_data/textline_recognition_alphabet.txt'
+alphabet_file = './table_recognition/demo/alphabet/textline_recognition_alphabet.tx'
 alphabet_len = len(open(alphabet_file, 'r', encoding='utf-8').readlines())
 max_seq_len = 100
 
